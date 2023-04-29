@@ -120,7 +120,7 @@ namespace physx
 		static HMODULE s_library;
 
 		if (s_library == NULL)
-			s_library = GetModuleHandle(gPhysXGpuLibraryName);
+			s_library = GetModuleHandleA(gPhysXGpuLibraryName);
 
 		if (s_library == NULL)
 		{
