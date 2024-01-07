@@ -2,6 +2,7 @@
 
 project "PhysX"
     language "C++"
+    targetname "PhysX_64"
 
     debugdir (OUT_DIR)
     targetdir (OUT_DIR)
@@ -24,7 +25,8 @@ project "PhysX"
         "../../include/solver/*.h",
         "../physxmetadata/core/include/**.h",
         "../physxmetadata/core/src/**.cpp",
-        "../compiler/resource_x64/resource.h"
+        "../compiler/resource_x64/resource.h",
+        "../compiler/resource_x64/PhysX.rc"
     }
 
     includedirs
@@ -75,6 +77,11 @@ project "PhysX"
         "src/omnipvd",
         "../../pvdruntime/include",
         "../foundation"
+    }
+
+    resincludedirs
+    {
+        "../compiler/resource_x64"
     }
 
     defines

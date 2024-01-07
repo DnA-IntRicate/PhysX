@@ -2,6 +2,7 @@
 
 project "PhysXCooking"
     language "C++"
+    targetname "PhysXCooking_64"
 
     debugdir (OUT_DIR)
     targetdir (OUT_DIR)
@@ -11,7 +12,9 @@ project "PhysXCooking"
     {
         "../../include/cooking/**.h",
         "src/*.h",
-        "src/*.cpp"
+        "src/*.cpp",
+        "../compiler/resource_x64/resource.h",
+        "../compiler/resource_x64/PhysXCooking.rc"
     }
 
     includedirs
@@ -26,6 +29,11 @@ project "PhysXCooking"
         "../geomutils/src",
         "../geomutils/src/mesh",
         "../foundation"
+    }
+
+    resincludedirs
+    {
+        "../compiler/resource_x64"
     }
 
     defines

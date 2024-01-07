@@ -2,6 +2,7 @@
 
 project "PhysXFoundation"
     language "C++"
+    targetname "PhysXFoundation_64"
 
     debugdir (OUT_DIR)
     targetdir (OUT_DIR)
@@ -11,13 +12,20 @@ project "PhysXFoundation"
     {
         "../../include/foundation/*.h",
         "*.h",
-        "*.cpp"
+        "*.cpp",
+        "../compiler/resource_x64/resource.h",
+        "../compiler/resource_x64/PhysXFoundation.rc"
     }
 
     includedirs
     {
         "../../include",
         "."
+    }
+
+    resincludedirs
+    {
+        "../compiler/resource_x64"
     }
 
     defines

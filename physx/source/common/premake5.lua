@@ -2,6 +2,7 @@
 
 project "PhysXCommon"
     language "C++"
+    targetname "PhysXCommon_64"
 
     debugdir (OUT_DIR)
     targetdir (OUT_DIR)
@@ -16,7 +17,9 @@ project "PhysXCommon"
         "../geomutils/**.h",
         "../geomutils/**.cpp",
         "../../include/geometry/**.h",
-        "../../include/collision/**.h"
+        "../../include/collision/**.h",
+        "../compiler/resource_x64/resource.h",
+        "../compiler/resource_x64/PhysXCommon.rc"
     }
 
     includedirs
@@ -43,6 +46,11 @@ project "PhysXCommon"
         "../../include/geometry",
         "../../include/collision",
         "../foundation"
+    }
+
+    resincludedirs
+    {
+        "../compiler/resource_x64"
     }
 
     defines
